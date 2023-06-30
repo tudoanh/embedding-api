@@ -125,3 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+from txtai.embeddings import Embeddings
+embeddings = Embeddings({"path": "sentence-transformers/all-MiniLM-L6-v2"})

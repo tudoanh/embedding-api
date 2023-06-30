@@ -1,8 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from txtai.embeddings import Embeddings
-embeddings = Embeddings({"path": "sentence-transformers/all-MiniLM-L6-v2"})
+from core.settings import embeddings
 
 class CreateEmbeddingView(APIView):
     def post(self, request, format=None):
